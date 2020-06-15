@@ -7,5 +7,6 @@ int main(int argc, char *argv[])
     MainWidget main(&widget);
 
     widget.show();
+    widget.setFixedSize(632,451);
     return app.exec();
 }
