@@ -10,13 +10,13 @@
 
 1. Install Qt:
   - Ubuntu/Debians
-
-    sudo apt-get install qt5-default
-
+```
+     sudo apt-get install qt5-default
+```
   - OpenSUSE
-
-    sudo zypper in -t pattern devel_qt5
-
+```
+     sudo zypper in -t pattern devel_qt5
+```
 2. Compile and Install
 
     make && sudo make install
