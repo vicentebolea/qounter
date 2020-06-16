@@ -1,4 +1,4 @@
-# Qounter (QT days counter)
+# Qounter (QT days counter) ![C/C++ CI](https://github.com/vicentebolea/qounter/workflows/C/C++%20CI/badge.svg)
 
 ---
 
