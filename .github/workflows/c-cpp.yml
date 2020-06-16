@@ -17,8 +17,6 @@ jobs:
     - name: Install libs
       run: sudo apt-get install qt5-default
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
     - name: make
       run: make
     - name: make
