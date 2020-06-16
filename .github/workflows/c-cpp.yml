@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Install libs
-      run: sudo apt-get install qt5-default pkg_config  
+      run: sudo apt-get install qt5-default pkg-config  
     - uses: actions/checkout@v2
     - name: make
       run: MOC=moc UIC=uic make
