@@ -1,13 +1,16 @@
+UIC ?= uic-qt5
+MOC ?= moc-qt5
+
 all: qounter
 
 ui: qounter.ui
-	uic-qt5 qounter.ui > ui_qounter.h
+	$(UIC) qounter.ui > ui_qounter.h
 
 moc_mainWidget.h: mainWidget.h
-	moc-qt5 mainWidget.h > moc_mainWidget.h
+	$(MOC) mainWidget.h > moc_mainWidget.h
 
 qounter: main.cxx moc_mainWidget.h ui
-	g++ -o qounter main.cxx -g -fPIC -I/usr/include/qt5/ -lQt5Core -lQt5Widgets -lQt5Gui
+	$(CXX) -o qounter main.cxx -g -fPIC -I/usr/include/qt5/ -lQt5Core -lQt5Widgets -lQt5Gui
 
 install:
 	cp -v qounter /usr/local/bin/
