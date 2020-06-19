@@ -15,7 +15,12 @@ jobs:
 
     steps:
     - name: Install libs
-      run: sudo apt-get install qt5-default pkg-config  
+      run: sudo apt-get install qt5-default qttools5-dev-tools pkg-config  
     - uses: actions/checkout@v2
     - name: make
-      run: MOC=moc UIC=uic make
+      run: MOC=moc UIC=uic LRELEASE=lrelease make
+    - name: make
+      run: MOC=moc UIC=uic LRELEASE=lrelease make test
+
+    - name: run tests 
+      run: ./qounter_test

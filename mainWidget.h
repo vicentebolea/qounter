@@ -5,7 +5,7 @@
 class MainWidget: public QWidget {
   Q_OBJECT
   public:
-    MainWidget(QWidget* parent) : QWidget(parent)
+    MainWidget() : QWidget()
     {
       ui.setupUi(this);
       this->connect(ui.StartDateEdit, SIGNAL(dateChanged(const QDate&)), this, SLOT(onDateChanged(const QDate&)));
@@ -63,5 +63,5 @@ class MainWidget: public QWidget {
     }
 
   private:
-    Ui::Form ui;
+    Ui::MainWindow ui;
 };
