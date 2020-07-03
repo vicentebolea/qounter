@@ -53,3 +53,6 @@ compile_commands.json
 
 .gdb_history
 qounter
+qounter-moc.h
+qounter_test
+qounter_test-moc.h

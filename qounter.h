@@ -2,10 +2,10 @@
 #include <QtCore/QDate>
 #include <QtCore/QSignalMapper>
 
-class MainWidget: public QWidget {
+class Qounter: public QWidget {
   Q_OBJECT
   public:
-    MainWidget() : QWidget()
+    Qounter() : QWidget()
     {
       ui.setupUi(this);
       this->connect(ui.StartDateEdit, SIGNAL(dateChanged(const QDate&)), this, SLOT(onDateChanged(const QDate&)));
@@ -62,6 +62,6 @@ class MainWidget: public QWidget {
       ui.daysFromNow->setValue(result);
     }
 
-  private:
+  public:
     Ui::MainWindow ui;
 };

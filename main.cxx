@@ -1,11 +1,11 @@
-#include "moc_mainWidget.h"
+#include "qounter-moc.h"
 #include <QtCore/QString>
 #include <QtCore/QTranslator>
 #include <QtWidgets/QMessageBox>
 #include <iostream>
 #include <QtCore/QDebug>
 
-#define TRANSLATIONS_PATH "/usr/local/share/qounter/translations/"
+#define TRANSLATIONS_PATH "/usr/local/share/Qounter/translations/"
 
 int main(int argc, char *argv[])
 {
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     app.installTranslator(translator);
   }
 
-  MainWidget main;
+  Qounter main;
   main.show();
   main.setFixedSize(632,451);
 

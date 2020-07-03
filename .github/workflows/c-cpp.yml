@@ -21,6 +21,5 @@ jobs:
       run: MOC=moc UIC=uic LRELEASE=lrelease make
     - name: make
       run: MOC=moc UIC=uic LRELEASE=lrelease make test
-
     - name: run tests 
-      run: ./qounter_test
+      run: ./qounter_test -platform offscreen

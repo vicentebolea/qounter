@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Qounter
 Comment=Day counters
-Exec=/usr/local/bin/qounter
-Icon=/usr/local/share/icons/hicolor/96x96/apps/qountericon.png
+Exec=/usr/local/bin/Qounter
+Icon=/usr/local/share/icons/hicolor/96x96/apps/Qountericon.png
 Terminal=false
 Type=Application
 Encoding=UTF-8
