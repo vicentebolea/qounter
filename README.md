@@ -6,6 +6,15 @@
 
 ---
 
+# TRY IT
+
+You can try it in Docker by:
+
+```
+
+sudo docker run -ti --rm -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix qounter
+```
+
 # INSTALL
 
 1. Install Qt:

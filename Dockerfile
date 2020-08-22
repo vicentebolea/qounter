@@ -7,7 +7,7 @@ WORKDIR /usr/src/qounter
 COPY . .
 
 # Run the command inside your image filesystem.
-RUN apt-get update && apt-get install -y qt5-default qttools5-dev-tools pkg-config  
+RUN apt-get update && apt-get install -y qt5-default qttools5-dev-tools pkg-config firefox
 RUN MOC=moc UIC=uic LRELEASE=lrelease make
 RUN MOC=moc UIC=uic LRELEASE=lrelease make test
 
@@ -19,7 +19,7 @@ RUN export uid=1000 gid=1000 PATH="$PATH:/usr/sbin" && \
     echo "developer:x:${uid}:" >> /etc/group && \
     echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
     chmod 0440 /etc/sudoers.d/developer && \
-    chown ${uid}:${gid} -R /home/developer \
+    chown ${uid}:${gid} -R /home/developer && \
     chown ${uid}:${gid} -R /usr/src/qounter/qounter
 
 USER developer
